@@ -1,0 +1,67 @@
+input:focus {outline:0;}
+input[type=text] {border:0;background:inherit}
+textarea{background:inherit}
+input[type=button]:hover{
+    background: cadetblue;
+}
+.icon {
+    height:32px;
+    width:32px;
+    padding: 5px;
+    border-radius:4px;
+}
+.icon:hover{
+    border: 1px solid #0005;
+    background: #0001;
+}
+.icons {
+    padding:0;
+    min-width:120px;
+}
+
+body{
+    text-align: center;
+    background:slategray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title {
+    font-size: 24pt;
+    width:100%;
+}
+.navigation{
+    font-size: 12pt;
+}
+.description {
+    width:100%;
+}
+.list1 {
+    margin: 25px auto;
+    width:80vw;
+    max-width:800px;
+    min-width: 50vw;
+    text-align: left;
+    padding: 15px;
+    background:white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #0003;
+    font-size:18pt;
+}
+
+.listItem {
+    font-size:18pt;
+    width:100%;
+}
+ul {
+    width: fit-content;
+    text-align: left;
+    margin: 0;
+}
+li {width:100%}
+textarea {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:18pt;
+    border:0;
+    resize: none;
+    overflow: hidden;
+}
+textarea:focus{outline:0}
