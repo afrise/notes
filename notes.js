@@ -1,4 +1,4 @@
-let DefaultNote = {Id: 0, Title: "NestPad", Description:"Everthing here is editable, and will save automatically! Have fun!"};
+let DefaultNote = {Id: 0, Title: "NestPad", Description:"Everything here is editable, and will save automatically! Have fun!"};
 var model = {
     CurrentNote: DefaultNote,
     NoteList: [DefaultNote, {Id:1, ParentId: 0, Title: "Bullet Point"}],
@@ -9,7 +9,7 @@ if (!localStorage.model)
     localStorage.model = JSON.stringify(model);
 else model = JSON.parse(localStorage.model);
 
-var NoteList = new Vue({
+var vm = new Vue({
     el: "#list",
     data: {
         CurrentNote: model.CurrentNote,
@@ -34,10 +34,11 @@ var NoteList = new Vue({
     },
     watch: {
         CurrentNote: ()=>{
-            NoteList.Save();
+            vm.Save();
             AutoGrow();
+            document.title = "NestPad - " + vm.CurrentNote.Title;
         },
-        NoteList: ()=>{NoteList.Save()}
+        NoteList: ()=>{vm.Save()}
     },
     methods: {
         GetParent: function(note){return this.NoteList.filter(function(n){return n.Id==note.ParentId})[0];},
@@ -91,4 +92,5 @@ function AutoGrow() {
     },1);
 }
 
+document.title = "NestPad - " + vm.CurrentNote.Title;
 AutoGrow();

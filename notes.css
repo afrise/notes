@@ -4,6 +4,28 @@ textarea{background:inherit}
 input[type=button]:hover{
     background: cadetblue;
 }
+
+a {color: #bbb}
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+
+.footer {
+    position: absolute;
+    bottom:5px;
+    width:100%;
+}
+
+.github{ 
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    color:white;
+    z-index:-1;
+}
+
 .icon {
     height:32px;
     width:32px;
@@ -16,13 +38,14 @@ input[type=button]:hover{
 }
 .icons {
     padding:0;
-    min-width:120px;
+    width:120px;
 }
 
 body{
     text-align: center;
     background:slategray;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
 }
 .title {
     font-size: 24pt;
@@ -30,6 +53,7 @@ body{
 }
 .navigation{
     font-size: 12pt;
+    color: black;
 }
 .description {
     width:100%;
@@ -46,6 +70,7 @@ body{
     box-shadow: 5px 5px 5px #0003;
     font-size:18pt;
 }
+.note{width:100%}
 
 .listItem {
     font-size:18pt;
